@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find the HCF!</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="game-container">
+        <header>
+          <h1 class="game-title">🎯 Find the Highest Common Factor!</h1>
+          <p class="instruction">Drag the common factors together to find the HCF!</p>
+          <div class="header-info">
+            <div class="progress">Question <span id="current-question">1</span> of <span id="total-questions">5</span></div>
+            <div class="score">Score: <span id="score">0</span></div>
+          </div>
+        </header>
+
+        <main>
+          <div class="numbers-display">
+            <div class="number-card">
+              <h2>Number 1: <span id="num1">24</span></h2>
+            </div>
+            <div class="number-card">
+              <h2>Number 2: <span id="num2">36</span></h2>
+            </div>
+          </div>
+
+          <div class="factors-container">
+            <div class="factors-box">
+              <h3>Factors of <span id="factors-num1">24</span></h3>
+              <div id="factors-list-1" class="factors-list"></div>
+            </div>
+
+            <div class="factors-box">
+              <h3>Factors of <span id="factors-num2">36</span></h3>
+              <div id="factors-list-2" class="factors-list"></div>
+            </div>
+          </div>
+
+          <div class="drop-zone-container">
+            <h3>Common Factors</h3>
+            <div id="drop-zone" class="drop-zone">
+              <p class="drop-hint">Drop common factors here</p>
+            </div>
+          </div>
+
+          <div id="result-message" class="result-message hidden"></div>
+
+          <div class="controls">
+            <button id="hint-btn" class="btn btn-hint">💡 Get Hint</button>
+            <button id="next-btn" class="btn btn-next hidden">Next Question ➡️</button>
+          </div>
+        </main>
+
+        <div id="confetti-container" class="confetti-container"></div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
